@@ -6,13 +6,13 @@
 
 
 // Our variables
-$base-font-family: "helvetica neue",arial,sans-serif;
+$base-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $base-font-weight: 400;
 $small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.8;
+$base-line-height: 1.5;
 
-$spacing-unit:     10px;
+$spacing-unit:     30px;
 
 //color define
 $text-color:       #111;
@@ -35,15 +35,9 @@ $on-palm:          600px;
 $on-laptop:        800px;
 
 //site head
-$site-header-height: 320px;
-$site-height: 32px;
-
+$site-height: 40px;
 //page content
 $page-content-min-height: 465px;
-
-//artilce min-height
-$article-min-height: 300px;
-
 // Use media queries like this:
 // @include media-query($on-palm) {
 //     .wrapper {

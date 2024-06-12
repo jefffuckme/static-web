@@ -6,37 +6,23 @@
   <meta http-equiv="Pragma" content="no-cache" />
   <meta http-equiv="Cache-Control" content="no-cache" />
   <meta http-equiv="Expires" content="0" />
-  <!-- 引入外部图片的处理 -->
-  <meta name="referrer" content="no-referrer" />
 
 
-  <!-- <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title> -->
-  <!-- <meta name="keyword" content="{% if page.keyword %}{{ page.keyword | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ page.title }}{% endif %}"> -->
-  <!-- <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ page.title }}{% endif %}"> -->
-  <!-- <meta name="robots" contect= "all">  -->
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
-  {% seo %}
-
-  <link rel="stylesheet" href="{{ "{{ site.url }}/static/libs/bootstrap/css/bootstrap-custom.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "{{ site.url }}/static/libs/bootstrap/css/bootstrap.min.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "{{ site.url }}/static/libs/fontAwesome/css/font-awesome.min.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "{{ site.url }}/static/libs/syntaxhighlighter/styles/shCore.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "{{ site.url }}/static/libs/syntaxhighlighter/styles/shThemeDefault.css" | prepend: site.baseurl }}">
-
+  <link rel="stylesheet" href="{{ "{{ site.url }}/static/libs/buttons/css/buttons.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "{{ site.url }}/static/libs/perfectScrollbar/css/perfect-scrollbar.min.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "{{ site.url }}/static/libs/mCustomScrollbar/css/jquery.mCustomScrollbar.min.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "{{ site.url }}/static/libs/select2/css/select2.min.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "{{ site.url }}/static/libs/colResizable/css/jQuery.colResizable.css" | prepend: site.baseurl }}">
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
 
   <!--my-->
   <link rel="stylesheet" href="{{ "{{ site.url }}/css/main.css" | prepend: site.baseurl }}">
   <link rel="stylesheet" href="{{ "{{ site.url }}/static/app/css/base.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "{{ site.url }}/static/app/css/cloud.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "{{ site.url }}/static/app/css/header.css" | prepend: site.baseurl }}">
-  <link rel="stylesheet" href="{{ "{{ site.url }}/static/app/css/navbar.css" | prepend: site.baseurl }}">
-
-  <!--js-->
-  <!--为了便于代码直接编写-->
-  <!--<script src="https://cdn.bootcss.com/vue/2.4.2/vue.min.js"></script>-->
-  <!--为了方便 jquery 代码的直接编写-->
-  <script src="{{ site.url }}/static/libs/jQuery/jquery-2.2.3.min.js"></script>
-
-  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9082537058031213" crossorigin="anonymous"></script> -->
+  <link rel="stylesheet" href="{{ "{{ site.url }}/static/app/css/jQuery.my2048.css" | prepend: site.baseurl }}">
 </head>

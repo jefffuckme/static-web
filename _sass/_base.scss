@@ -89,10 +89,10 @@ li {
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 420;
-    margin-bottom: $spacing-unit / 2 + 10;
-    margin-top: $spacing-unit / 2+ 10;
+    font-weight: $base-font-weight;
 }
+
+
 
 /**
  * Links
@@ -109,13 +109,6 @@ a {
         color: $text-color;
         text-decoration: underline;
     }
-}
-
-/**
- * 段落颜色
- */
-p {
-    color: #555555;
 }
 
 
@@ -145,9 +138,8 @@ pre,
 code {
     font-size: 15px;
     border: 1px solid $grey-color-light;
-    border-top: none;
     border-radius: 3px;
-    background-color: #f7f7f9;
+    background-color: #eef;
 }
 
 code {
