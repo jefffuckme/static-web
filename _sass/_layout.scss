@@ -4,7 +4,8 @@
 .site-header {
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
-    min-height: $site-height;
+    min-height: $site-header-height;
+    margin-bottom: 30px;
 
     // Positioning context for the mobile navigation icon
     position: relative;
@@ -228,29 +229,33 @@
 .post-content {
     margin-bottom: $spacing-unit;
 
-    h2 {
-        font-size: 32px;
+    h1 {
+        font-size: 30px;
+        line-height: 38px;
 
         @include media-query($on-laptop) {
-            font-size: 28px;
+            font-size: 31px;
+        }
+    }
+
+    h2 {
+        font-size: 24px;
+        line-height: 32px;
+
+        @include media-query($on-laptop) {
+            font-size: 27px;
         }
     }
 
     h3 {
-        font-size: 26px;
+        font-size: 18px;
+        line-height: 26px;
 
         @include media-query($on-laptop) {
-            font-size: 22px;
+            font-size: 23px;
         }
     }
 
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
 }
 
 
@@ -319,27 +324,49 @@ ul {
 #markdown-toc {
     position: fixed;
     left: 5px;
-    bottom: 90px;
+    bottom: 60px;
     border-radius: 0.3em;
     box-shadow: rgba(0,0,0,0.15) 0 1px 4px;
     box-sizing: border-box;
     background-color: white;
     padding: 15px;
     z-index: 999;
-    @include opacityBg(0.6);
+    @include opacityBg(0.7);
 }
 
-ul#markdown-toc  > li > a {
+#markdown-toc:hover {
+    box-shadow: rgba(0,0,0,0.15) 0 6px 8px;
+}
+
+ul#markdown-toc {
+    list-style: none !important;
+}
+ul#markdown-toc ul{
+    list-style: none !important;
+    display: none;
+}
+ul#markdown-toc ul.active{
+    display: inline-block;
+}
+
+//此处a不要使用 >a 因为存在嵌套
+ul#markdown-toc  > li a {
     display: block;
-    max-width: 150px;
+    max-width: 140px;
     overflow: hidden;
     white-space: nowrap;
+}
+
+ul#markdown-toc  > li  a.active {
+    color: #ff9900;
+    //border-left: solid 3px #0072c6;
 }
 
 //left
 ul#markdown-toc .fa {
     cursor: pointer;
     margin-top: 5px;
+    color: #aaa;
 }
 
 //validate help
@@ -417,4 +444,16 @@ input.has-success:focus {
 
 .blue-img-border {
     border: 3px solid $blue-color;
+}
+
+
+/**
+    min height for article
+ */
+article {
+    min-height: $article-min-height;
+}
+
+.post-content {
+    min-height: $article-min-height;
 }
